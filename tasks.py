@@ -3,21 +3,9 @@ from pathlib import Path
 from robocorp import browser
 from robocorp.tasks import task
 from RPA.PDF import PDF
-import os
 from datetime import datetime
-
-usuario_penotariado = os.environ.get("USUARIO_PENOTARIADO")
-pass_penotariado = os.environ.get("PASS_PENOTARIADO")
-usuario_catastro = os.environ.get("USUARIO_CATASTRO")
-soporte_catastro = os.environ.get("SOPORTE_CATASTRO")
-
-date_today = datetime.now().strftime("%d/%m/%Y")
-catastro_id = "9734606DF1993S0056YQ"
-codigo_postal = "08191"
-
-print(f"Today's date: {date_today}")
-print(f"Catastro ID: {catastro_id}")
-print(f"Codigo Postal: {codigo_postal}")
+from RPA.Robocorp.Vault import Vault
+from robocorp import workitems
 
 @task
 def index():
@@ -31,14 +19,37 @@ def index():
         browser_engine="chromium",
         screenshot="only-on-failure"
     )
+
+    # Get today's date
+    date_today = datetime.now().strftime("%d/%m/%Y")
+
+    # Get inputs from workitem
+    wi = workitems.inputs.current
+    payload = wi.payload or {}
+    catastro_id = payload.get("catastro_id")
+    codigo_postal = payload.get("codigo_postal")
+    if not catastro_id or not codigo_postal:
+        raise ValueError("Faltan inputs: catastro_id / codigo_postal")
+
+    print(f"Today's date: {date_today}")
+    print(f"Catastro ID: {catastro_id}")
+    print(f"Codigo Postal: {codigo_postal}")
+
+    # Get credentials from Vault
+    cred = Vault.get_secret("valorix")
+    usuario_penotariado = cred["USUARIO_PENOTARIADO"]
+    pass_penotariado = cred["PASS_PENOTARIADO"]
+    usuario_catastro = cred["USUARIO_CATASTRO"]
+    soporte_catastro = cred["SOPORTE_CATASTRO"]
+
     try:
         # Catastro website automation
-        login_catastro()
-        data_catastro = search_catastral_data()
+        login_catastro(usuario_catastro, soporte_catastro)
+        data_catastro = search_catastral_data(date_today, catastro_id)
 
         # Penotariado website automation
-        login_penotariado()
-        go_to_maps()
+        login_penotariado(usuario_penotariado, pass_penotariado)
+        go_to_maps(codigo_postal)
         data_penotariado = extract_statistics()
 
         print(f"Data from Catastro: {data_catastro}")
@@ -49,7 +60,7 @@ def index():
         return data_catastro, data_penotariado
 
 # Catastro
-def login_catastro():
+def login_catastro(usuario_catastro, soporte_catastro):
     """
     Login to the site with given credentials.
     """
@@ -61,7 +72,7 @@ def login_catastro():
     page.fill('#ctl00_Contenido_soporte', f"{soporte_catastro}")
     page.click('text=Validar DNI / Soporte')
 
-def search_catastral_data():
+def search_catastral_data(date_today, catastro_id):
     """
     Search for cadastral data using a given reference.
     """
@@ -98,7 +109,7 @@ def export_data(page):
     return data
 
 # Penotariado 
-def login_penotariado():
+def login_penotariado(usuario_penotariado, pass_penotariado):
     """
     Login to the Penotariado site with given credentials.
     """
@@ -113,7 +124,7 @@ def login_penotariado():
     page.click('#login')
     page.wait_for_url("**/home**", timeout=15000)
 
-def go_to_maps():
+def go_to_maps(codigo_postal):
     """
     Search for specific data on the Penotariado site.
     """
@@ -125,9 +136,9 @@ def go_to_maps():
 
     # Search codigo postal
     page = browser.page()
-    search_details_codigo_postal(page)
+    search_details_codigo_postal(page, codigo_postal)
 
-def search_details_codigo_postal(page):
+def search_details_codigo_postal(page, codigo_postal):
     """
     Search for details using codigo postal.
     """   
