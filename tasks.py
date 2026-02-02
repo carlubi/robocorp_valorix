@@ -59,15 +59,29 @@ def index():
         data_catastro = search_catastral_data(date_today, catastro_id)
 
         
-        payloads = []
-        payloads.append({
-            "data_catastro": data_catastro,
-            "codigo_postal": codigo_postal
-        })
+        # GUARDAR OUTPUT WORK ITEM
+        workitems.outputs.create(
+            payload={
+                "status": "success",
+                "catastro_id": catastro_id,
+                "codigo_postal": codigo_postal,
+                "data_catastro": data_catastro
+            }
+        )
         
     except Exception as e:
         print(f"An error occurred: {e}")
         
+        # GUARDAR OUTPUT CON ERROR
+        workitems.outputs.create(
+            payload={
+                "status": "error",
+                "error": str(e),
+                "catastro_id": catastro_id,
+                "codigo_postal": codigo_postal,
+                "data_catastro": data_catastro
+            }
+        )
         raise e
     finally:
         print("Automation finished!")
