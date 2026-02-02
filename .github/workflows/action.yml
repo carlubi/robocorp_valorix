@@ -1,0 +1,28 @@
+name: 'Upload robot to Robocorp Control Room'
+description: 'Upload robot to Robocorp Control Room'
+author: 'Robocorp'
+branding:
+  color: 'purple'
+  icon: 'upload-cloud'
+
+inputs:
+  workspace-key:
+    description: 'Workspace API access key'
+    required: true
+  workspace-id:
+    description: 'Workspace ID to upload the robot to'
+    required: true
+  robot-id:
+    description: 'ID of robot to update'
+    required: true
+  api-endpoint:
+    description: 'Control Room API URL'
+    default: 'https://api.eu1.robocorp.com'
+    required: false
+  robot-dir:
+    description: 'Directory which to pack and upload'
+    default: './'
+    required: false
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
