@@ -58,35 +58,20 @@ def index():
         login_catastro(usuario_catastro, soporte_catastro)
         data_catastro = search_catastral_data(date_today, catastro_id)
 
-        
-        # GUARDAR OUTPUT WORK ITEM
-        workitems.outputs.create(
-            payload={
-                "status": "success",
-                "catastro_id": catastro_id,
-                "codigo_postal": codigo_postal,
-                "data_catastro": data_catastro
-            }
-        )
-        
     except Exception as e:
         print(f"An error occurred: {e}")
-        
-        # GUARDAR OUTPUT CON ERROR
-        workitems.outputs.create(
-            payload={
-                "status": "error",
-                "error": str(e),
-                "catastro_id": catastro_id,
-                "codigo_postal": codigo_postal,
-                "data_catastro": data_catastro
-            }
-        )
         raise e
     finally:
         print("Automation finished!")
-    
-    return data_catastro
+        data_catastro = data_catastro if data_catastro else {}
+        
+        # Crear work item de salida con éxito
+        outputs = workitems.outputs.create({
+            "status": "success",
+            "data_catastro": data_catastro
+        })
+        outputs.save()
+        return data_catastro
 
 # Catastro
 def login_catastro(usuario_catastro, soporte_catastro):
