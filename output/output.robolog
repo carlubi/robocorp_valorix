@@ -1,0 +1,685 @@
+V 0.0.4
+T 2026-02-01T20:05:46.644+00:00
+ID 1|6587ce8a-ffa9-11f0-aac5-765cff8f4a06
+I "sys.platform=darwin"
+I "python=3.12.11 | packaged by conda-forge | (main, Jun  4 2025, 14:38:53) [Clang 18.1.8 ]"
+M a:"tasks.py"
+SR a|0.015
+M c:"Collect tasks"
+M d:"setup"
+M e:""
+P b:c|d|e|e|0
+ST b|0.015
+M f:"regular"
+M g:"\nCollecting tasks from: tasks.py\n"
+C f|g|0.016
+M h:"stderr"
+M i:"2026-02-01 21:05:47,397 - RPA.core.certificates - INFO - Truststore not in use, HTTPS traffic validated against `certifi` package. (requires Python 3.10.12 and 'pip' 23.2.1 at minimum)\n"
+C h|i|0.753
+M j:"PASS"
+ET j|e|6.025
+M l:"index"
+M m:"tasks"
+M n:"/Users/carlubi/Desktop/robocorp_valorix/tasks.py"
+M o:"\n    Main task which solves the RPA challenge!\n\n    Downloads the source data Excel file and uses Playwright to fill the entries inside\n    rpachallenge.com.\n    "
+P k:l|m|n|o|9
+ST k|6.025
+M p:"================================ "
+C f|p|6.026
+M q:"Running: "
+C f|q|6.026
+M r:"task_name"
+C r|l|6.026
+M s:" ================================\n"
+C f|s|6.026
+M t:"METHOD"
+SE k|t|6.026
+M v:"configure"
+M w:"robocorp.browser"
+M x:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/browser/__init__.py"
+P u:v|w|x|e|25
+SE u|t|6.026
+M y:"kwargs"
+M z:"dict"
+M A:"{'browser_engine': 'chromium', 'screenshot': 'only-on-failure'}"
+EA y|z|A
+EE t|j|6.03
+M C:"login_catastro"
+P B:C|m|n|e|39
+SE B|t|6.03
+M E:"goto"
+P D:E|w|x|e|223
+SE D|t|6.031
+M F:"url"
+M G:"str"
+M H:"'https://www.sedecatastro.gob.es/Accesos/SECAccDNI.aspx?Dest=3&ejercicio=2026'"
+EA F|G|H
+M I:"Playwright browsers path: /Users/carlubi/.robocorp/playwright)"
+M K:"playwright"
+M L:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/browser/_context.py"
+P J:K|w|L|e|62
+L D|I|J|62|6.038
+P M:E|w|x|e|240
+M N:"Page"
+M O:"<Page url='https://www.sedecatastro.gob.es/Accesos/SECAccDNI.aspx?Dest=3&ejercicio=2026'>"
+R M|N|O|9.313
+EE t|j|9.313
+M Q:"page"
+P P:Q|w|x|e|109
+SE P|t|9.313
+P R:Q|w|x|e|133
+R R|N|O|9.313
+EE t|j|9.313
+P S:C|m|n|e|44
+AS S|Q|N|O|9.313
+AS S|Q|N|O|9.314
+M U:"Page.wait_for_load_state"
+M V:"playwright.sync_api._generated"
+M W:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/playwright/sync_api/_generated.py"
+P T:U|V|W|e|9100
+SE T|t|9.314
+M X:"state"
+M Y:"'networkidle'"
+EA X|G|Y
+P Z:U|V|W|e|9151
+M 0:"NoneType"
+M 1:"None"
+R Z|0|1|9.919
+EE t|j|9.919
+M 3:"Page.fill"
+P 2:3|V|W|e|10133
+SE 2|t|9.919
+M 4:"selector"
+M 5:"'#ctl00_Contenido_nif'"
+EA 4|G|5
+M 6:"value"
+M 7:"'48214335X'"
+EA 6|G|7
+P 8:3|V|W|e|10176
+R 8|0|1|9.948
+EE t|j|9.948
+SE 2|t|9.948
+M 9:"'#ctl00_Contenido_soporte'"
+EA 4|G|9
+M aa:"'BOF172857'"
+EA 6|G|aa
+R 8|0|1|9.957
+EE t|j|9.957
+M ac:"Page.click"
+P ab:ac|V|W|e|9893
+SE ab|t|9.957
+M ad:"'text=Validar DNI / Soporte'"
+EA 4|G|ad
+P ae:ac|V|W|e|9961
+R ae|0|1|10.498
+EE t|j|10.498
+EE t|j|10.498
+M ag:"search_catastral_data"
+P af:ag|m|n|e|51
+SE af|t|10.498
+SE P|t|10.498
+R R|N|O|10.499
+EE t|j|10.499
+P ah:ag|m|n|e|55
+AS ah|Q|N|O|10.499
+SE T|t|10.499
+EA X|G|Y
+R Z|0|1|12.539
+EE t|j|12.539
+M aj:"Page.select_option"
+P ai:aj|V|W|e|11068
+SE ai|t|12.539
+M ak:"'#ctl00_Contenido_ddlFinalidad'"
+EA 4|G|ak
+M al:"'Efectos informativos'"
+EA 6|G|al
+P am:aj|V|W|e|11140
+M an:"list"
+M ao:"['1']"
+R am|an|ao|12.555
+EE t|j|12.555
+SE 2|t|12.555
+M ap:"'#ctl00_Contenido_txtFechaConsulta'"
+EA 4|G|ap
+M aq:"'22/01/2026'"
+EA 6|G|aq
+R 8|0|1|13.183
+EE t|j|13.183
+SE 2|t|13.184
+M ar:"'#ctl00_Contenido_txtRC2'"
+EA 4|G|ar
+M as:"'9734606DF1993S0056YQ'"
+EA 6|G|as
+R 8|0|1|13.192
+EE t|j|13.192
+SE ab|t|13.192
+M at:"'#ctl00_Contenido_btnValorReferencia'"
+EA 4|G|at
+R ae|0|1|14.153
+EE t|j|14.153
+M av:"export_data"
+P au:av|m|n|e|66
+SE au|t|14.153
+M aw:"<Page url='https://www.sedecatastro.gob.es/CYCBienInmueble/SECValorReferencia.aspx?UrbRus=U&RefC=9734606DF1993S0056YQ&ejercicio=2026&esBice=&RCBice1=&RCBice2=&DenoBice=&from=OVCBusqueda&pest=rc&RCCompleta=9734606DF1993S0056YQ&final=Efectos%20informativos&strFechaVR=20260122&enlVR=0198c48cc2f188d0d02644cf80f65761cc168382&nifAccesoPIC=&nombreAccesoPIC=&del=8&mun=183&ur=2041208430'>"
+EA Q|N|aw
+M ay:"Page.inner_text"
+P ax:ay|V|W|e|10804
+SE ax|t|14.153
+M az:"'#ctl00_Contenido_tblInmueble'"
+EA 4|G|az
+P aA:ay|V|W|e|10832
+M aB:"'Referencia catastral\\n9734606DF1993S0056YQ\\nLocalizaci\u00f3n\\nCL MARCONI 1 Es:B Pl:04 Pt:04\\n08191 RUBI (Barcelona)\\nClase\\nUrbano\\nUso principal\\nResidencial\\nFecha de valor\\n22/01/2026\\nValor de Referencia\\n150.449,27 \u20ac'"
+R aA|G|aB|14.171
+EE t|j|14.171
+P aC:av|m|n|e|71
+M aD:"result_table"
+AS aC|aD|G|aB|14.171
+M aE:"stdout"
+M aF:"Referencia catastral\n9734606DF1993S0056YQ\nLocalizaci\u00f3n\nCL MARCONI 1 Es:B Pl:04 Pt:04\n08191 RUBI (Barcelona)\nClase\nUrbano\nUso principal\nResidencial\nFecha de valor\n22/01/2026\nValor de Referencia\n150.449,27 \u20ac"
+C aE|aF|14.171
+M aG:"\n"
+C aE|aG|14.171
+P aH:av|m|n|e|74
+M aI:"lines"
+M aJ:"['Referencia catastral', '9734606DF1993S0056YQ', 'Localizaci\u00f3n', 'CL MARCONI 1 Es:B Pl:04 Pt:04', '08191 RUBI (Barcelona)', 'Clase', 'Urbano', 'Uso principal', 'Residencial', 'Fecha de valor', '22/01/2026', 'Valor de Referencia', '150.449,27 \u20ac']"
+AS aH|aI|an|aJ|14.172
+P aK:av|m|n|e|76
+M aL:"data"
+M aM:"{'referencia_catastral': '9734606DF1993S0056YQ', 'localizacion': 'CL MARCONI 1 Es:B Pl:04 Pt:04, 08191 RUBI (Barcelona)', 'clase': 'Urbano', 'uso_principal': 'Residencial', 'fecha_valor': '22/01/2026', 'valor_referencia': '150.449,27 \u20ac'}"
+AS aK|aL|z|aM|14.172
+P aN:av|m|n|e|85
+R aN|z|aM|14.172
+EE t|j|14.172
+P aO:ag|m|n|e|63
+AS aO|aL|z|aM|14.172
+P aP:ag|m|n|e|64
+R aP|z|aM|14.172
+EE t|j|14.172
+P aQ:l|m|n|e|23
+M aR:"data_catastro"
+AS aQ|aR|z|aM|14.172
+M aT:"login_penotariado"
+P aS:aT|m|n|e|88
+SE aS|t|14.172
+SE D|t|14.172
+M aU:"'https://penotariado.com/inmobiliario/home'"
+EA F|G|aU
+M aV:"<Page url='https://penotariado.com/inmobiliario/en/home'>"
+R M|N|aV|15.281
+EE t|j|15.281
+SE P|t|15.281
+R R|N|aV|15.281
+EE t|j|15.281
+P aW:aT|m|n|e|93
+AS aW|Q|N|aV|15.282
+SE T|t|15.282
+EA X|G|Y
+R Z|0|1|17.014
+EE t|j|17.014
+SE ab|t|17.014
+M aX:"'text=Login'"
+EA 4|G|aX
+R ae|0|1|17.094
+EE t|j|17.094
+SE P|t|17.094
+R R|N|aV|17.094
+EE t|j|17.094
+P aY:aT|m|n|e|97
+AS aY|Q|N|aV|17.094
+SE 2|t|17.095
+M aZ:"'#username'"
+EA 4|G|aZ
+M a0:"'carla@innovalaus.com'"
+EA 6|G|a0
+R 8|0|1|18.126
+EE t|j|18.127
+SE 2|t|18.127
+M a1:"'input[name=\"password\"]'"
+EA 4|G|a1
+M a2:"'GsurRrJ&2ZH41tSb1bDJQSrZZ^kBqye84F!Bt'"
+EA 6|G|a2
+R 8|0|1|18.171
+EE t|j|18.171
+SE ab|t|18.171
+M a3:"'#login'"
+EA 4|G|a3
+R ae|0|1|18.858
+EE t|j|18.858
+M a5:"Page.wait_for_url"
+P a4:a5|V|W|e|9155
+SE a4|t|18.858
+M a6:"'**/home**'"
+EA F|G|a6
+P a7:a5|V|W|e|9196
+R a7|0|1|19.544
+EE t|j|19.545
+EE t|j|19.545
+M a9:"go_to_maps"
+P a8:a9|m|n|e|103
+SE a8|t|19.545
+SE P|t|19.545
+R R|N|aV|19.545
+EE t|j|19.545
+P ba:a9|m|n|e|107
+AS ba|Q|N|aV|19.545
+SE ab|t|19.545
+M bb:"'text=Mapa'"
+EA 4|G|bb
+R ae|0|1|20.628
+EE t|j|20.628
+SE P|t|20.628
+M bc:"<Page url='https://penotariado.com/inmobiliario/home'>"
+R R|N|bc|20.628
+EE t|j|20.628
+P bd:a9|m|n|e|109
+AS bd|Q|N|bc|20.628
+SE T|t|20.628
+EA X|G|Y
+R Z|0|1|30.378
+EE t|j|30.379
+SE ab|t|30.379
+M be:"'text=Descartar todas'"
+EA 4|G|be
+R ae|0|1|30.442
+EE t|j|30.442
+SE P|t|30.442
+M bf:"<Page url='https://penotariado.com/inmobiliario/buscador-precio-vivienda'>"
+R R|N|bf|30.442
+EE t|j|30.442
+P bg:a9|m|n|e|114
+AS bg|Q|N|bf|30.442
+M bi:"search_details_codigo_postal"
+P bh:bi|m|n|e|117
+SE bh|t|30.442
+EA Q|N|bf
+M bk:"Page.frames"
+P bj:bk|V|W|e|7944
+SE bj|t|30.443
+P bl:bk|V|W|e|7953
+M bm:"[<Frame name= url='https://penotariado.com/inmobiliario/buscador-precio-vivienda'>, <Frame name= url='about:blank'>, <Frame name= url='https://www.googletagmanager.com/static/service_worker/61k0/sw_iframe.html?origin=https%3A%2F%2Fpenotariado.com'>, <Frame name=a-h3fbr5mkpxhl url='https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeA_TwrAAAAAFVVZ96ovYMavrZjyrqW7E5JhWuS&co=aHR0cHM6Ly9wZW5vdGFyaWFkby5jb206NDQz&hl=en&v=N67nZn4AqZkNcbeMu4prBgzg&size=invisible&badge=bottomright&anchor-ms=20000&execute-ms=30000&cb=69w2e2q2qfia'>, <Frame name= url='about:blank'>, <Frame name= url='https://penotariado.com/mapa/?locale=es'>, <Frame name= url='about:blank'>]"
+R bl|an|bm|30.443
+EE t|j|30.443
+C aE|bm|30.443
+C aE|aG|30.443
+M bo:"Page.frame"
+P bn:bo|V|W|e|8028
+SE bn|t|30.443
+M bp:"name"
+EA bp|0|1
+P bq:bo|V|W|e|8058
+M br:"Frame"
+M bs:"<Frame name= url='https://penotariado.com/mapa/?locale=es'>"
+R bq|br|bs|30.444
+EE t|j|30.444
+P bt:bi|m|n|e|126
+M bu:"map_frame"
+AS bt|bu|br|bs|30.444
+M bw:"Frame.fill"
+P bv:bw|V|W|e|4547
+SE bv|t|30.444
+M bx:"'input[placeholder=\"Buscar provincia, municipio o c\u00f3digo postal\"]'"
+EA 4|G|bx
+M by:"'08191'"
+EA 6|G|by
+P bz:bw|V|W|e|4590
+R bz|0|1|30.471
+EE t|j|30.471
+M bB:"Frame.click"
+P bA:bB|V|W|e|4306
+SE bA|t|30.471
+M bC:"'button[aria-label=\"Buscar\"]'"
+EA 4|G|bC
+P bD:bB|V|W|e|4374
+R bD|0|1|30.572
+EE t|j|30.572
+SE T|t|30.574
+EA X|G|Y
+R Z|0|1|30.579
+EE t|j|30.579
+M bF:"Frame.wait_for_selector"
+P bE:bF|V|W|e|3727
+SE bE|t|30.579
+M bG:"'button.btn-statistics'"
+EA 4|G|bG
+P bH:bF|V|W|e|3794
+M bI:"ElementHandle"
+M bJ:"<JSHandle preview=JSHandle@node>"
+R bH|bI|bJ|30.608
+EE t|j|30.608
+SE bA|t|30.608
+EA 4|G|bG
+R bD|0|1|30.709
+EE t|j|30.709
+SE T|t|30.709
+EA X|G|Y
+R Z|0|1|30.711
+EE t|j|30.711
+SE P|t|30.711
+R R|N|bf|30.711
+EE t|j|30.712
+P bK:bi|m|n|e|137
+AS bK|Q|N|bf|30.712
+M bM:"Page.locator"
+P bL:bM|V|W|e|10189
+SE bL|t|30.712
+M bN:"'button.c-ctn-button--primary:has-text(\"Continuar\")'"
+EA 4|G|bN
+P bO:bM|V|W|e|10238
+M bP:"Locator"
+M bQ:"<Locator frame=<Frame name= url='https://penotariado.com/inmobiliario/buscador-precio-vivienda'> selector='button.c-ctn-button--primary:has-text(\"Continuar\")'>"
+R bO|bP|bQ|30.712
+EE t|j|30.712
+M bS:"Locator.click"
+P bR:bS|V|W|e|15546
+SE bR|t|30.712
+P bT:bS|V|W|e|15630
+R bT|0|1|30.94
+EE t|j|30.94
+EE t|j|30.94
+EE t|j|30.94
+M bV:"extract_statistics"
+P bU:bV|m|n|e|140
+SE bU|t|30.94
+SE P|t|30.941
+R R|N|bf|30.941
+EE t|j|30.941
+P bW:bV|m|n|e|141
+AS bW|Q|N|bf|30.941
+SE T|t|30.941
+EA X|G|Y
+R Z|0|1|30.944
+EE t|j|30.944
+SE bL|t|30.944
+M bX:"'section.c-pin-statistics__indicators h3'"
+EA 4|G|bX
+M bY:"<Locator frame=<Frame name= url='https://penotariado.com/inmobiliario/buscador-precio-vivienda'> selector='section.c-pin-statistics__indicators h3'>"
+R bO|bP|bY|30.944
+EE t|j|30.944
+M b0:"Locator.inner_text"
+P bZ:b0|V|W|e|17067
+SE bZ|t|30.945
+P b1:b0|V|W|e|17086
+M b2:"'Valores desde diciembre 2024 hasta noviembre 2025'"
+R b1|G|b2|34.119
+EE t|j|34.119
+SE bL|t|34.119
+M b3:"'dt:has-text(\"Precio medio m\u00b2\") + dd'"
+EA 4|G|b3
+M b4:"<Locator frame=<Frame name= url='https://penotariado.com/inmobiliario/buscador-precio-vivienda'> selector='dt:has-text(\"Precio medio m\u00b2\") + dd'>"
+R bO|bP|b4|34.119
+EE t|j|34.119
+SE bZ|t|34.119
+M b5:"'1.895 \u20ac/m\u00b2'"
+R b1|G|b5|34.781
+EE t|j|34.781
+SE bL|t|34.781
+M b6:"'dt:has-text(\"Compraventas\") + dd'"
+EA 4|G|b6
+M b7:"<Locator frame=<Frame name= url='https://penotariado.com/inmobiliario/buscador-precio-vivienda'> selector='dt:has-text(\"Compraventas\") + dd'>"
+R bO|bP|b7|34.781
+EE t|j|34.781
+SE bZ|t|34.781
+M b8:"'727.556'"
+R b1|G|b8|34.793
+EE t|j|34.793
+SE bL|t|34.793
+M b9:"'dt:has-text(\"Importe medio\") + dd'"
+EA 4|G|b9
+M ca:"<Locator frame=<Frame name= url='https://penotariado.com/inmobiliario/buscador-precio-vivienda'> selector='dt:has-text(\"Importe medio\") + dd'>"
+R bO|bP|ca|34.793
+EE t|j|34.793
+SE bZ|t|34.793
+M cb:"'213.522 \u20ac'"
+R b1|G|cb|34.799
+EE t|j|34.799
+SE bL|t|34.799
+M cc:"'dt:has-text(\"Superficie media\") + dd'"
+EA 4|G|cc
+M cd:"<Locator frame=<Frame name= url='https://penotariado.com/inmobiliario/buscador-precio-vivienda'> selector='dt:has-text(\"Superficie media\") + dd'>"
+R bO|bP|cd|34.799
+EE t|j|34.799
+SE bZ|t|34.799
+M ce:"'113 m\u00b2'"
+R b1|G|ce|34.804
+EE t|j|34.804
+P cf:bV|m|n|e|143
+M cg:"datos"
+M ch:"{'periodo': 'Valores desde diciembre 2024 hasta noviembre 2025', 'precio_medio_m2': '1.895 \u20ac/m\u00b2', 'compraventas': '727.556', 'importe_medio': '213.522 \u20ac', 'superficie_media': '113 m\u00b2'}"
+AS cf|cg|z|ch|34.804
+P ci:bV|m|n|e|151
+R ci|z|ch|34.804
+EE t|j|34.804
+P cj:l|m|n|e|28
+M ck:"data_penotariado"
+AS cj|ck|z|ch|34.804
+M cl:"Data from Catastro: {'referencia_catastral': '9734606DF1993S0056YQ', 'localizacion': 'CL MARCONI 1 Es:B Pl:04 Pt:04, 08191 RUBI (Barcelona)', 'clase': 'Urbano', 'uso_principal': 'Residencial', 'fecha_valor': '22/01/2026', 'valor_referencia': '150.449,27 \u20ac'}"
+C aE|cl|34.804
+C aE|aG|34.805
+M cm:"Data from Penotariado: {'periodo': 'Valores desde diciembre 2024 hasta noviembre 2025', 'precio_medio_m2': '1.895 \u20ac/m\u00b2', 'compraventas': '727.556', 'importe_medio': '213.522 \u20ac', 'superficie_media': '113 m\u00b2'}"
+C aE|cm|34.805
+C aE|aG|34.805
+M cn:"Automation finished!"
+C aE|cn|34.805
+C aE|aG|34.805
+P co:l|m|n|e|36
+M cp:"tuple"
+M cq:"({'referencia_catastral': '9734606DF1993S0056YQ', 'localizacion': 'CL MARCONI 1 Es:B Pl:04 Pt:04, 08191 RUBI (Barcelona)', 'clase': 'Urbano', 'uso_principal': 'Residencial', 'fecha_valor': '22/01/2026', 'valor_referencia': '150.449,27 \u20ac'}, {'periodo': 'Valores desde diciembre 2024 hasta noviembre 2025', 'precio_medio_m2': '1.895 \u20ac/m\u00b2', 'compraventas': '727.556', 'importe_medio': '213.522 \u20ac', 'superficie_media': '113 m\u00b2'})"
+R co|cp|cq|34.805
+EE t|j|34.805
+C r|l|34.876
+M cr:" status: "
+C f|cr|34.876
+M cs:"PASS\n"
+C f|cs|34.877
+M ct:"================================================================================\n"
+C f|ct|34.877
+ET j|e|34.877
+M cv:"Teardown tasks"
+M cw:"teardown"
+P cu:cv|cw|e|e|0
+ST cu|34.877
+M cx:"Process snapshot"
+SPS cx|35.477
+M cy:"System information:\nMemory: Total: 16.0 G, Available: 3.5 G, Used: 77.9 %\nCPUs: 10"
+P cz:e|e|e|e|0
+L I|cy|cz|0|35.572
+M cA:"Current Process: python3.12 (pid: 63632, status: running)\nCommand Line: /Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/bin/python3.12 -m robocorp.tasks run tasks.py\nStarted: 21:05:46\nParent pid: 63599\nResident Set Size: 80.5 M\nVirtual Memory Size: 392.5 G"
+L I|cA|cz|0|35.582
+M cB:"OutputToPortThread|Thread ID: 6173913088 (daemon)"
+STD cB|35.582
+M cC:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/threading.py"
+M cD:"_bootstrap"
+M cE:"self._bootstrap_inner()"
+TBE cC|1032|cD|cE
+M cF:"self"
+M cG:"Thread"
+M cH:"<Thread(OutputToPortThread, started daemon 6173913088)>"
+TBV cF|cG|cH
+M cI:"_bootstrap_inner"
+M cJ:"self.run()"
+TBE cC|1075|cI|cJ
+TBV cF|cG|cH
+M cK:"run"
+M cL:"self._target(*self._args, **self._kwargs)"
+TBE cC|1012|cK|cL
+TBV cF|cG|cH
+M cM:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/tasks/_log_output_setup.py"
+M cN:"write_in_thread"
+M cO:"msg = q.get()"
+TBE cM|73|cN|cO
+M cP:"msg"
+M cQ:"'ST cu|34.862\\n'"
+TBV cP|G|cQ
+M cR:"client_socket"
+M cS:"socket"
+M cT:"<socket.socket fd=4, family=2, type=1, proto=0, laddr=('127.0.0.1', 58412), raddr=('127.0.0.1', 54742)>"
+TBV cR|cS|cT
+M cU:"log"
+M cV:"module"
+M cW:"<module 'robocorp.log' from '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/__init__.py'>"
+TBV cU|cV|cW
+M cX:"port_in_env"
+M cY:"'54742'"
+TBV cX|G|cY
+M cZ:"q"
+M c0:"Queue"
+M c1:"<queue.Queue object at 0x10156af30>"
+TBV cZ|c0|c1
+M c2:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/queue.py"
+M c3:"get"
+M c4:"self.not_empty.wait()"
+TBE c2|171|c3|c4
+TBV cF|c0|c1
+M c5:"block"
+M c6:"bool"
+M c7:"True"
+TBV c5|c6|c7
+M c8:"timeout"
+TBV c8|0|1
+M c9:"wait"
+M da:"waiter.acquire()"
+TBE cC|355|c9|da
+M db:"Condition"
+M dc:"<Condition(<unlocked _thread.lock object at 0x101d57440>, 1)>"
+TBV cF|db|dc
+TBV c8|0|1
+M dd:"waiter"
+M de:"lock"
+M df:"<locked _thread.lock object at 0x101a2ecc0>"
+TBV dd|de|df
+M dg:"saved_state"
+TBV dg|0|1
+M dh:"gotit"
+M di:"False"
+TBV dh|c6|di
+ETD 35.584
+M dj:"MainThread|Thread ID: 8491805760 (non daemon)"
+STD dj|35.584
+M dk:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/__init__.py"
+M dl:"process_snapshot"
+M dm:"robo_logger.process_snapshot()"
+TBE dk|268|dl|dm
+M dn:"logger_instances"
+M do:"{<robocorp.log._robo_logger._RoboLogger object at 0x101badf40>: 1, <robocorp.log._robo_logger._RoboLogger object at 0x101da3d10>: 1}"
+TBV dn|z|do
+M dp:"robo_logger"
+M dq:"_RoboLogger"
+M dr:"<robocorp.log._robo_logger._RoboLogger object at 0x101badf40>"
+TBV dp|dq|dr
+M ds:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_logger.py"
+M dt:"new_func"
+M du:"return func(self, *args, **kwargs)"
+TBE ds|20|dt|du
+TBV cF|dq|dr
+M dv:"args"
+M dw:"()"
+TBV dv|cp|dw
+M dx:"{}"
+TBV y|z|dx
+M dy:"func"
+M dz:"function"
+M dA:"<function _RoboLogger.process_snapshot at 0x101ee0f40>"
+TBV dy|dz|dA
+M dB:"return self._robot_output_impl.process_snapshot(hide_vars)"
+TBE ds|416|dl|dB
+TBV cF|dq|dr
+M dC:"hide_vars"
+TBV dC|c6|di
+M dD:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_output_impl.py"
+M dE:"self._dump_threads(hide_vars)"
+TBE dD|747|dl|dE
+M dF:"_RoboOutputImpl"
+M dG:"<robocorp.log._robo_output_impl._RoboOutputImpl object at 0x1019b8860>"
+TBV cF|dF|dG
+TBV dC|c6|di
+TBV cU|cV|cW
+M dH:"entry_id"
+M dI:"'ps_0'"
+TBV dH|G|dI
+M dJ:"entry_type"
+M dK:"'process_snapshot'"
+TBV dJ|G|dK
+M dL:"psutil"
+M dM:"<module 'psutil' from '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/psutil/__init__.py'>"
+TBV dL|cV|dM
+M dN:"AccessDenied"
+M dO:"type"
+M dP:"<class 'psutil.AccessDenied'>"
+TBV dN|dO|dP
+M dQ:"NoSuchProcess"
+M dR:"<class 'psutil.NoSuchProcess'>"
+TBV dQ|dO|dR
+M dS:"ZombieProcess"
+M dT:"<class 'psutil.ZombieProcess'>"
+TBV dS|dO|dT
+M dU:"curr_process"
+M dV:"Process"
+M dW:"psutil.Process(pid=63632, name='python3.12', status='running', started='21:05:46')"
+TBV dU|dV|dW
+M dX:"log_info"
+M dY:"<function _RoboOutputImpl.process_snapshot.<locals>.log_info at 0x1119a1ee0>"
+TBV dX|dz|dY
+M dZ:"memory_info"
+M d0:"'Total: 16.0 G, Available: 3.5 G, Used: 77.9 %'"
+TBV dZ|G|d0
+M d1:"child_i"
+M d2:"int"
+M d3:"0"
+TBV d1|d2|d3
+M d4:"child"
+TBV d4|dV|dW
+M d5:"'python3.12'"
+TBV bp|G|d5
+M d6:"status"
+M d7:"'running'"
+TBV d6|G|d7
+M d8:"create_time"
+M d9:"'21:05:46'"
+TBV d8|G|d9
+M ea:"ppid"
+M eb:"'63599'"
+TBV ea|G|eb
+M ec:"cmdline"
+M ed:"'/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/bin/python3.12 -m robocorp.tasks run tasks.py'"
+TBV ec|G|ed
+M ee:"rss"
+M ef:"'80.5 M'"
+TBV ee|G|ef
+M eg:"vms"
+M eh:"'392.5 G'"
+TBV eg|G|eh
+M ei:"proc_memory_info"
+M ej:"pmem"
+M ek:"pmem(rss=84426752, vms=421423005696, pfaults=38093, pageins=1110)"
+TBV ei|ej|ek
+M el:"message"
+M em:"'Current Process: python3.12 (pid: 63632, status: running)\\nCommand Line: /Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/bin/python3.12 -m robocorp.tasks run tasks.py\\nStarted: 21:05:46\\nParent pid: 63599\\nResident Set Size: 80.5 M\\nVirtual Memory Size: 392.5 G'"
+TBV el|G|em
+M en:"_dump_threads"
+M eo:"stack.append((f, f.f_lineno))"
+TBE dD|768|en|eo
+TBV cF|dF|dG
+TBV dC|c6|di
+M ep:"thread_id"
+M eq:"8491805760"
+TBV ep|d2|eq
+M er:"frame"
+M es:"<frame at 0x1119908c0, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_output_impl.py', line 772, code _dump_threads>"
+TBV er|er|es
+M et:"thread"
+M eu:"_MainThread"
+M ev:"<_MainThread(MainThread, started 8491805760)>"
+TBV et|eu|ev
+M ew:"title"
+M ex:"'MainThread|Thread ID: 8491805760 (non daemon)'"
+TBV ew|G|ex
+M ey:"f"
+M ez:"<frame at 0x110e67150, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/tasks/_commands.py', line 494, code run>"
+TBV ey|er|ez
+M eA:"stack"
+M eB:"[(<frame at 0x1033a6810, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/__init__.py', line 268, code process_snapshot>, 268), (<frame at 0x1119943c0, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_logger.py', line 20, code new_func>, 20), (<frame at 0x1119a8b80, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_logger.py', line 416, code process_snapshot>, 416), (<frame at 0x104483c40, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_output_impl.py', line 747, code process_snapshot>, 747), (<frame at 0x1119908c0, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_output_impl.py', line 772, code _dump_threads>, 768)]"
+TBV eA|an|eB
+ETD 35.587
+EPS 35.587
+ET j|e|35.6
+ER j|35.6
