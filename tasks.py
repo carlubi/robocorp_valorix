@@ -1,9 +1,23 @@
-import os
 from pathlib import Path
 
 from robocorp import browser
 from robocorp.tasks import task
 from RPA.PDF import PDF
+import os
+from datetime import datetime
+
+usuario_penotariado = os.environ.get("USUARIO_PENOTARIADO")
+pass_penotariado = os.environ.get("PASS_PENOTARIADO")
+usuario_catastro = os.environ.get("USUARIO_CATASTRO")
+soporte_catastro = os.environ.get("SOPORTE_CATASTRO")
+
+date_today = datetime.now().strftime("%d/%m/%Y")
+catastro_id = "9734606DF1993S0056YQ"
+codigo_postal = "08191"
+
+print(f"Today's date: {date_today}")
+print(f"Catastro ID: {catastro_id}")
+print(f"Codigo Postal: {codigo_postal}")
 
 @task
 def index():
@@ -31,7 +45,6 @@ def index():
         print(f"Data from Penotariado: {data_penotariado}")
 
     finally:
-        # A place for teardown and cleanups. (Playwright handles browser closing)
         print("Automation finished!")
         return data_catastro, data_penotariado
 
@@ -44,8 +57,8 @@ def login_catastro():
     page = page = browser.page()
     page.wait_for_load_state("networkidle")
 
-    page.fill('#ctl00_Contenido_nif', "48214335X")
-    page.fill('#ctl00_Contenido_soporte', "BOF172857")
+    page.fill('#ctl00_Contenido_nif', f"{usuario_catastro}")
+    page.fill('#ctl00_Contenido_soporte', f"{soporte_catastro}")
     page.click('text=Validar DNI / Soporte')
 
 def search_catastral_data():
@@ -56,8 +69,8 @@ def search_catastral_data():
     page.wait_for_load_state("networkidle")
 
     page.select_option('#ctl00_Contenido_ddlFinalidad', "Efectos informativos")
-    page.fill('#ctl00_Contenido_txtFechaConsulta', "22/01/2026")
-    page.fill('#ctl00_Contenido_txtRC2', "9734606DF1993S0056YQ")
+    page.fill('#ctl00_Contenido_txtFechaConsulta', f"{date_today}")
+    page.fill('#ctl00_Contenido_txtRC2', f"{catastro_id}")
     page.click('#ctl00_Contenido_btnValorReferencia')
 
     data = export_data(page)
@@ -95,8 +108,8 @@ def login_penotariado():
     page.click('text=Login')
 
     page = browser.page()
-    page.fill('#username', "carla@innovalaus.com")
-    page.fill('input[name="password"]', "GsurRrJ&2ZH41tSb1bDJQSrZZ^kBqye84F!Bt")
+    page.fill('#username', f"{usuario_penotariado}")
+    page.fill('input[name="password"]', f"{pass_penotariado}")
     page.click('#login')
     page.wait_for_url("**/home**", timeout=15000)
 
@@ -126,7 +139,7 @@ def search_details_codigo_postal(page):
     map_frame = page.frame(url="https://penotariado.com/mapa/?locale=es")
     
     # Fill input in that frame
-    map_frame.fill('input[placeholder="Buscar provincia, municipio o código postal"]', "08191")
+    map_frame.fill('input[placeholder="Buscar provincia, municipio o código postal"]', f"{codigo_postal}")
     map_frame.click('button[aria-label="Buscar"]')
     page.wait_for_load_state("networkidle")
 

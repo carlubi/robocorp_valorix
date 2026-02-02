@@ -1,0 +1,8 @@
+- name: Run robot
+  env:
+    USUARIO_PENOTARIADO : ${{ secrets.USUARIO_PENOTARIADO }}
+    PASS_PENOTARIADO: ${{ secrets.PASS_PENOTARIADO }}
+    USUARIO_CATASTRO: ${{ secrets.USUARIO_CATASTRO }}
+    SOPORTE_CATASTRO: ${{ secrets.SOPORTE_CATASTRO }}
+  run: |
+    python tasks.py
