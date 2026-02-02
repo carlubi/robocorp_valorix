@@ -55,6 +55,9 @@ def index():
         print(f"Data from Catastro: {data_catastro}")
         print(f"Data from Penotariado: {data_penotariado}")
 
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        raise e
     finally:
         print("Automation finished!")
         return data_catastro, data_penotariado
