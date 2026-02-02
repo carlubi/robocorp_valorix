@@ -1,5 +1,5 @@
 from pathlib import Path
-
+import json
 from robocorp import browser
 from robocorp.tasks import task
 from RPA.PDF import PDF
@@ -25,11 +25,18 @@ def index():
 
     # Get inputs from workitem
     wi = workitems.inputs.current
-    payload = wi.payload or {}
-    catastro_id = payload.get("catastro_id")
-    codigo_postal = payload.get("codigo_postal")
-    if not catastro_id or not codigo_postal:
-        raise ValueError("Faltan inputs: catastro_id / codigo_postal")
+    raw = wi.payload
+
+    # Si viene como string JSON:
+    if isinstance(raw, str):
+        payload = json.loads(raw)
+    else:
+        payload = raw or {}
+
+    catastro_id = payload["catastro_id"]
+    codigo_postal = payload["codigo_postal"]
+
+    print("OK:", catastro_id, codigo_postal)
 
     print(f"Today's date: {date_today}")
     print(f"Catastro ID: {catastro_id}")
@@ -41,6 +48,9 @@ def index():
     pass_penotariado = cred["PASS_PENOTARIADO"]
     usuario_catastro = cred["USUARIO_CATASTRO"]
     soporte_catastro = cred["SOPORTE_CATASTRO"]
+
+    print("Starting automation...")
+    print("Logging user Penotariado:", usuario_penotariado)
 
     try:
         # Catastro website automation
