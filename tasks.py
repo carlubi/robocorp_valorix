@@ -7,9 +7,6 @@ from datetime import datetime
 from RPA.Robocorp.Vault import Vault
 from robocorp import workitems
 
-from playwright.sync_api import sync_playwright
-from playwright_stealth import stealth_sync
-
 @task
 def index():
     """
