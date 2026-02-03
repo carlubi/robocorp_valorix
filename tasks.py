@@ -34,8 +34,9 @@ def index():
         payload = raw or {}
 
     catastro_id = payload["catastro_id"]
+    supabase_id = payload["supabase_id"]
 
-    print("OK:", catastro_id)
+    print("OK:", catastro_id, supabase_id)
 
     print(f"Today's date: {date_today}")
     print(f"Catastro ID: {catastro_id}")
@@ -56,7 +57,8 @@ def index():
         workitems.outputs.create(
             payload={
                 "status": "success",
-                "data_catastro": data_catastro
+                "data_catastro": data_catastro, 
+                "supabase_id": supabase_id
             }
         )
     except Exception as e:
