@@ -1,23 +1,21 @@
 
 Collecting tasks from: tasks.py
 ================================ Running: [96mindex[0m ================================
-Referencia catastral
-9734606DF1993S0056YQ
-Localización
-CL MARCONI 1 Es:B Pl:04 Pt:04
-08191 RUBI (Barcelona)
-Clase
-Urbano
-Uso principal
-Residencial
-Fecha de valor
-22/01/2026
-Valor de Referencia
-150.449,27 €
-[<Frame name= url='https://penotariado.com/inmobiliario/buscador-precio-vivienda'>, <Frame name= url='about:blank'>, <Frame name= url='https://www.googletagmanager.com/static/service_worker/61k0/sw_iframe.html?origin=https%3A%2F%2Fpenotariado.com'>, <Frame name=a-h3fbr5mkpxhl url='https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeA_TwrAAAAAFVVZ96ovYMavrZjyrqW7E5JhWuS&co=aHR0cHM6Ly9wZW5vdGFyaWFkby5jb206NDQz&hl=en&v=N67nZn4AqZkNcbeMu4prBgzg&size=invisible&badge=bottomright&anchor-ms=20000&execute-ms=30000&cb=69w2e2q2qfia'>, <Frame name= url='about:blank'>, <Frame name= url='https://penotariado.com/mapa/?locale=es'>, <Frame name= url='about:blank'>]
-Data from Catastro: {'referencia_catastral': '9734606DF1993S0056YQ', 'localizacion': 'CL MARCONI 1 Es:B Pl:04 Pt:04, 08191 RUBI (Barcelona)', 'clase': 'Urbano', 'uso_principal': 'Residencial', 'fecha_valor': '22/01/2026', 'valor_referencia': '150.449,27 €'}
-Data from Penotariado: {'periodo': 'Valores desde diciembre 2024 hasta noviembre 2025', 'precio_medio_m2': '1.895 €/m²', 'compraventas': '727.556', 'importe_medio': '213.522 €', 'superficie_media': '113 m²'}
-Automation finished!
-[96mindex[0m status: PASS
-================================================================================
+[96mindex[0m status: [91mFAIL
+[0m[91m
+'catastro_id'
+[0m======================== Full Traceback (running [96mindex[0m) ========================
+[91mTraceback (most recent call last):
+  File "/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/tasks/_commands.py", line 453, in run
+    result = task.run(**kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/tasks/_task.py", line 57, in run
+    return self.method(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlubi/Desktop/robocorp_valorix/tasks.py", line 36, in index
+    catastro_id = payload["catastro_id"]
+                  ~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'catastro_id'
+
+[0m================================================================================
 Log (html): /Users/carlubi/Desktop/robocorp_valorix/output/log.html

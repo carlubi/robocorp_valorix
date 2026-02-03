@@ -217,3 +217,15 @@
 {"when":1769976382,"controller":"rcc.sema4aicode","event":"robot exit","detail":"From rcc \"v20.3.3\" (controller: \"Sema4aiCode\") point of view, \"actual main robot run\" was SUCCESS.","comment":"rcc point of view"}
 {"when":1769976382,"controller":"rcc.sema4aicode","event":"processes","detail":"final","comment":"count: 0"}
 {"when":1769976383,"controller":"rcc.sema4aicode","event":"stop","detail":"robot","comment":"done"}
+{"when":1770049744,"controller":"rcc.sema4aicode","event":"start task","detail":"name=Browser Example from=/Users/carlubi/Desktop/robocorp_valorix/robot.yaml","comment":"at task environment setup"}
+{"when":1770049744,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 00/15 v20.3.3 0.059s Context: \"Carla\" \u003ccarlubi@Carlas-MacBook-Pro.local\u003e [darwin_arm64/ProductName: macOS; ProductVersion: 26.2; BuildVersion: 25C56]."}
+{"when":1770049744,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 01/15 v20.3.3 0.005s Fresh [shared mode] holotree environment 4c20bd54-e736-71f7-de1f-f4c013a4817b. (parent/pid: 7765/7766)"}
+{"when":1770049744,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 02/15 v20.3.3 0.007s Holotree blueprint is \"324539b20e2c9619\" [darwin_arm64 with 9 workers on 10 CPUs from \"conda.yaml\"]."}
+{"when":1770049744,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 14/15 v20.3.3 0.251s Restore space from library [with 9 workers on 10 CPUs; with compression: true]."}
+{"when":1770049745,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 15/15 v20.3.3 0.653s Fresh holotree done [with 9 workers on 10 CPUs]."}
+{"when":1770049745,"controller":"rcc.sema4aicode","event":"start","detail":"robot","comment":"started"}
+{"when":1770049745,"controller":"rcc.sema4aicode","event":"run","detail":"robot","comment":"task run"}
+{"when":1770049745,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 0 to 1 ... map[7804:python3.12]"}
+{"when":1770049754,"controller":"rcc.sema4aicode","event":"robot exit","detail":"From rcc \"v20.3.3\" (controller: \"Sema4aiCode\") point of view, \"actual main robot run\" was FAILURE, reason: exit status 1","comment":"rcc point of view"}
+{"when":1770049754,"controller":"rcc.sema4aicode","event":"processes","detail":"final","comment":"count: 0"}
+{"when":1770049755,"controller":"rcc.sema4aicode","event":"stop","detail":"robot","comment":"done"}
