@@ -7,6 +7,9 @@ from datetime import datetime
 from RPA.Robocorp.Vault import Vault
 from robocorp import workitems
 
+from playwright.sync_api import sync_playwright
+from playwright_stealth import stealth_sync
+
 @task
 def index():
     """
@@ -131,42 +134,86 @@ def export_data(page):
 
 # Penotariado 
 def login_penotariado(usuario_penotariado, pass_penotariado):
-    """
-    Login to the Penotariado site with given credentials.
-    """
-    print("=== INICIO LOGIN PENOTARIADO ===")
-    browser.goto("https://penotariado.com/inmobiliario/home")
-    page = browser.page()
-    page.wait_for_load_state("networkidle")
+    print("=== INTENTO CON STEALTH ===")
     
-    print(f"URL actual tras goto: {page.url}")
-    print(f"Título página: {page.title()}")
-    
-    # Verificar si está bloqueado
-    page_content = page.content().lower()
-    if "blocked" in page_content or "event_id" in page_content or "captcha" in page_content:
-        print("❌ PÁGINA BLOQUEADA DETECTADA")
-        page.screenshot(path="output/blocked_login.png")
-        print(f"HTML snippet: {page.content()[:500]}")
-        raise Exception("Sitio bloqueado por anti-bot")
-    
-    print("Buscando botón 'Login'...")
-    page.click('text=Login', timeout=10000)
-    
-    print(f"URL tras click Login: {page.url}")
-    
-    # NO volver a llamar browser.page() - usar la misma referencia
-    page.wait_for_selector('#username', state="visible", timeout=30000)
-    print(f"URL con formulario visible: {page.url}")
-    
-    page.fill('#username', usuario_penotariado)
-    page.fill('input[name="password"]', pass_penotariado)
-    page.click('#login')
-    
-    page.wait_for_url("**/home**", timeout=15000)
-    print(f"✓ Login exitoso. URL final: {page.url}")
-    print("=== FIN LOGIN PENOTARIADO ===\n")
-
+    # Crear nuevo contexto con configuración anti-detección
+    with sync_playwright() as p:
+        browser_instance = p.chromium.launch(
+            headless=True,
+            args=[
+                '--disable-blink-features=AutomationControlled',
+                '--disable-dev-shm-usage',
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-web-security',
+                '--disable-features=IsolateOrigins,site-per-process'
+            ]
+        )
+        
+        context = browser_instance.new_context(
+            viewport={'width': 1920, 'height': 1080},
+            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+            locale='es-ES',
+            timezone_id='Europe/Madrid',
+            permissions=['geolocation']
+        )
+        
+        page = context.new_page()
+        
+        # Aplicar stealth
+        stealth_sync(page)
+        
+        # Inyectar scripts anti-detección adicionales
+        page.add_init_script("""
+            // Sobrescribir webdriver
+            Object.defineProperty(navigator, 'webdriver', {get: () => false});
+            
+            // Simular Chrome real
+            window.chrome = {
+                runtime: {},
+                loadTimes: function() {},
+                csi: function() {},
+                app: {}
+            };
+            
+            // Plugins
+            Object.defineProperty(navigator, 'plugins', {
+                get: () => [
+                    {name: 'Chrome PDF Plugin', filename: 'internal-pdf-viewer'},
+                    {name: 'Chrome PDF Viewer', filename: 'mhjfbmdgcfjbbpaeojofohoefgiehjai'},
+                    {name: 'Native Client', filename: 'internal-nacl-plugin'}
+                ]
+            });
+            
+            // Languages
+            Object.defineProperty(navigator, 'languages', {
+                get: () => ['es-ES', 'es', 'en-US', 'en']
+            });
+            
+            // Permissions
+            const originalQuery = window.navigator.permissions.query;
+            window.navigator.permissions.query = (parameters) => (
+                parameters.name === 'notifications' ?
+                    Promise.resolve({state: Notification.permission}) :
+                    originalQuery(parameters)
+            );
+        """)
+        
+        page.goto("https://penotariado.com/inmobiliario/home", wait_until='networkidle')
+        
+        print(f"URL: {page.url}")
+        print(f"Título: {page.title()}")
+        
+        if "blocked" in page.content().lower():
+            page.screenshot(path="output/still_blocked.png")
+            raise Exception("Aún bloqueado")
+        
+        # Continuar con login...
+        page.click('text=Login')
+        page.wait_for_selector('#username', state='visible')
+        page.fill('#username', usuario_penotariado)
+        page.fill('input[name="password"]', pass_penotariado)
+        page.click('#login')
 
 def go_to_maps(codigo_postal):
     """
