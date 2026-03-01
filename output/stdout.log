@@ -1,21 +1,47 @@
 
-Collecting tasks from: tasks.py
+Collecting task index from: tasks.py
 ================================ Running: [96mindex[0m ================================
+OK: None None
+Today's date: 01/03/2026
+Catastro ID: None
 [96mindex[0m status: [91mFAIL
 [0m[91m
-'catastro_id'
+"Configuration Error: Missing required environment variable(s): RC_API_SECRET_HOST, RC_API_SECRET_TOKEN, RC_WORKSPACE_ID.\n\nTo connect to the Robocorp Control Room, these variables are essential. Please verify your configuration to ensure that all required environment variables are set.\n\nFor local runs, configure these variables in your 'devdata/env.json' file.\n\nConsult the 'Configure file vault support' section in the documentation for step-by-step setup instructions:\nhttps://robocorp.com/docs-robot-framework/development-guide/variables-and-secrets/vault\n\nWhen running from the Control Room, these variables should be configured automatically.\nIf running with Robocorp Visual Studio Code extension, ensure that the project is linked to Control Room:\nhttps://robocorp.com/docs-robot-framework/developer-tools/visual-studio-code/extension-features#linking-to-control-room"
 [0m======================== Full Traceback (running [96mindex[0m) ========================
 [91mTraceback (most recent call last):
-  File "/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/tasks/_commands.py", line 453, in run
+  File "/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/Robocorp/Vault.py", line 247, in __init__
+    self._host = required_env("RC_API_SECRET_HOST")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/core/helpers.py", line 59, in required_env
+    raise KeyError(f"Missing required environment variable: {name}")
+KeyError: 'Missing required environment variable: RC_API_SECRET_HOST'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/tasks/_commands.py", line 453, in run
     result = task.run(**kwargs)
              ^^^^^^^^^^^^^^^^^^
-  File "/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/tasks/_task.py", line 57, in run
+  File "/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/tasks/_task.py", line 57, in run
     return self.method(**kwargs)
            ^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/carlubi/Desktop/robocorp_valorix/tasks.py", line 36, in index
-    catastro_id = payload["catastro_id"]
-                  ~~~~~~~^^^^^^^^^^^^^^^
-KeyError: 'catastro_id'
+  File "/Users/carlubi/Desktop/robocorp_valorix/tasks.py", line 49, in index
+    cred = vault.get_secret("valorix")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/Robocorp/Vault.py", line 617, in get_secret
+    return self.adapter.get_secret(secret_name)
+           ^^^^^^^^^^^^
+  File "/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/Robocorp/Vault.py", line 593, in adapter
+    self._adapter = self._adapter_factory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/Robocorp/Vault.py", line 607, in factory
+    return adapter(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/Robocorp/Vault.py", line 251, in __init__
+    _raise_invalid_configuration()
+  File "/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/Robocorp/Vault.py", line 224, in _raise_invalid_configuration
+    raise KeyError(error_message)
+KeyError: "Configuration Error: Missing required environment variable(s): RC_API_SECRET_HOST, RC_API_SECRET_TOKEN, RC_WORKSPACE_ID.\n\nTo connect to the Robocorp Control Room, these variables are essential. Please verify your configuration to ensure that all required environment variables are set.\n\nFor local runs, configure these variables in your 'devdata/env.json' file.\n\nConsult the 'Configure file vault support' section in the documentation for step-by-step setup instructions:\nhttps://robocorp.com/docs-robot-framework/development-guide/variables-and-secrets/vault\n\nWhen running from the Control Room, these variables should be configured automatically.\nIf running with Robocorp Visual Studio Code extension, ensure that the project is linked to Control Room:\nhttps://robocorp.com/docs-robot-framework/developer-tools/visual-studio-code/extension-features#linking-to-control-room"
 
 [0m================================================================================
 Log (html): /Users/carlubi/Desktop/robocorp_valorix/output/log.html

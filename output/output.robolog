@@ -1,86 +1,86 @@
 V 0.0.4
-T 2026-02-02T16:29:05.746+00:00
-ID 1|4acdf226-0054-11f1-98b5-765cff8f4a06
+T 2026-03-01T10:07:56.578+00:00
+ID 1|84df3238-1556-11f1-b011-765cff8f4a04
 I "sys.platform=darwin"
-I "python=3.12.11 | packaged by conda-forge | (main, Jun  4 2025, 14:38:53) [Clang 18.1.8 ]"
-M a:"tasks.py"
-SR a|0.02
+I "python=3.12.11 | packaged by conda-forge | (main, Jun  4 2025, 14:42:11) [Clang 18.1.8 ]"
+M a:"tasks.py - index"
+SR a|0.022
 M c:"Collect tasks"
 M d:"setup"
 M e:""
 P b:c|d|e|e|0
-ST b|0.02
+ST b|0.023
 M f:"regular"
-M g:"\nCollecting tasks from: tasks.py\n"
-C f|g|0.021
+M g:"\nCollecting task index from: tasks.py\n"
+C f|g|0.023
 M h:"stderr"
-M i:"2026-02-02 17:29:06,547 - RPA.core.certificates - INFO - Truststore not in use, HTTPS traffic validated against `certifi` package. (requires Python 3.10.12 and 'pip' 23.2.1 at minimum)\n"
-C h|i|0.801
+M i:"2026-03-01 11:07:57,555 - RPA.core.certificates - INFO - Truststore not in use, HTTPS traffic validated against `certifi` package. (requires Python 3.10.12 and 'pip' 23.2.1 at minimum)\n"
+C h|i|0.977
 M j:"PASS"
-ET j|e|8.348
+ET j|e|9.845
 M l:"index"
 M m:"tasks"
 M n:"/Users/carlubi/Desktop/robocorp_valorix/tasks.py"
 M o:"\n    Main task which solves the RPA challenge!\n\n    Downloads the source data Excel file and uses Playwright to fill the entries inside\n    rpachallenge.com.\n    "
-P k:l|m|n|o|11
-ST k|8.348
+P k:l|m|n|o|13
+ST k|9.845
 M p:"================================ "
-C f|p|8.348
+C f|p|9.845
 M q:"Running: "
-C f|q|8.348
+C f|q|9.845
 M r:"task_name"
-C r|l|8.348
+C r|l|9.845
 M s:" ================================\n"
-C f|s|8.348
+C f|s|9.846
 M t:"METHOD"
-SE k|t|8.348
+SE k|t|9.846
 M v:"configure"
 M w:"robocorp.browser"
-M x:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/browser/__init__.py"
+M x:"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/browser/__init__.py"
 P u:v|w|x|e|25
-SE u|t|8.349
+SE u|t|9.847
 M y:"kwargs"
 M z:"dict"
 M A:"{'browser_engine': 'chromium', 'screenshot': 'only-on-failure'}"
 EA y|z|A
-EE t|j|8.353
-P B:l|m|n|e|24
+EE t|j|9.851
+P B:l|m|n|e|26
 M C:"date_today"
 M D:"str"
-M E:"'02/02/2026'"
-AS B|C|D|E|8.353
+M E:"'01/03/2026'"
+AS B|C|D|E|9.851
 M G:"Inputs.current"
 M H:"robocorp.workitems"
-M I:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/workitems/__init__.py"
+M I:"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/workitems/__init__.py"
 P F:G|H|I|e|88
-SE F|t|8.353
+SE F|t|9.851
 M J:"Work items input path not defined, to simulate different input values set the\nenvironment variable `RC_WORKITEM_INPUT_PATH`.\n\nGenerated input path: /Users/carlubi/Desktop/robocorp_valorix/output/work-items-in/workitems.json\n\n"
-C h|J|8.353
+C h|J|9.852
 P K:G|H|I|e|90
 M L:"Input"
 M M:"Input[id=0,payload=null,files=[],state=None,saved=True]"
-R K|L|M|8.354
-EE t|j|8.354
-P N:l|m|n|e|27
+R K|L|M|9.853
+EE t|j|9.853
+P N:l|m|n|e|29
 M O:"wi"
-AS N|O|L|M|8.354
+AS N|O|L|M|9.853
 M Q:"WorkItem.payload"
 M R:"robocorp.workitems._workitem"
-M S:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/workitems/_workitem.py"
+M S:"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/workitems/_workitem.py"
 P P:Q|R|S|e|53
-SE P|t|8.354
+SE P|t|9.854
 P T:Q|R|S|e|55
 M U:"NoneType"
 M V:"None"
-R T|U|V|8.354
-EE t|j|8.354
-P W:l|m|n|e|28
+R T|U|V|9.854
+EE t|j|9.854
+P W:l|m|n|e|30
 M X:"raw"
-AS W|X|U|V|8.354
+AS W|X|U|V|9.854
 M Z:"else (to if isinstance(raw, str))"
-P Y:Z|m|n|e|31
+P Y:Z|m|n|e|33
 M 0:"ELSE_SCOPE"
-SE Y|0|8.354
+SE Y|0|9.854
 M 1:"isinstance"
 M 2:"builtin_function_or_method"
 M 3:"<built-in function isinstance>"
@@ -89,265 +89,392 @@ EA X|U|V
 M 4:"type"
 M 5:"<class 'str'>"
 EA D|4|5
-P 6:l|m|n|e|34
+P 6:l|m|n|e|36
 M 7:"payload"
 M 8:"{}"
-AS 6|7|z|8|8.355
-EE 0|j|8.355
-M 9:"KeyError: 'catastro_id'"
-STB 9|8.355
-M aa:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/tasks/_task.py"
-M ab:"run"
-M ac:"return self.method(**kwargs)"
-TBE aa|57|ab|ac
-M ad:"self"
-M ae:"Task"
-M af:"Task(index, status: Status.NOT_RUN)"
-TBV ad|ae|af
+AS 6|7|z|8|9.854
+EE 0|j|9.855
+P 9:l|m|n|e|38
+M aa:"catastro_id"
+AS 9|aa|U|V|9.855
+P ab:l|m|n|e|39
+M ac:"supabase_id"
+AS ab|ac|U|V|9.855
+P ad:l|m|n|e|40
+M ae:"direccion"
+AS ad|ae|U|V|9.855
+M af:"stdout"
+M ag:"OK:"
+C af|ag|9.855
+M ah:" "
+C af|ah|9.855
+C af|V|9.855
+C af|ah|9.855
+C af|V|9.855
+M ai:"\n"
+C af|ai|9.855
+M aj:"Today's date: 01/03/2026"
+C af|aj|9.855
+C af|ai|9.855
+M ak:"Catastro ID: None"
+C af|ak|9.855
+C af|ai|9.855
+M am:"Vault.__init__"
+M an:"RPA.Robocorp.Vault"
+M ao:"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/Robocorp/Vault.py"
+P al:am|an|ao|e|568
+SE al|t|9.855
+M ap:"args"
+M aq:"tuple"
+M ar:"()"
+EA ap|aq|ar
+EA y|z|8
+EE t|j|9.856
+P as:l|m|n|e|48
+M at:"vault"
+M au:"Vault"
+M av:"<RPA.Robocorp.Vault.Vault object at 0x10a3fd700>"
+AS as|at|au|av|9.856
+M ax:"Vault.get_secret"
+P aw:ax|an|ao|e|611
+SE aw|t|9.856
+M ay:"secret_name"
+M az:"'valorix'"
+EA ay|D|az
+M aA:"KeyError: 'Missing required environment variable: RC_API_SECRET_HOST'"
+STB aA|9.856
+M aB:"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/tasks/_task.py"
+M aC:"run"
+M aD:"return self.method(**kwargs)"
+TBE aB|57|aC|aD
+M aE:"self"
+M aF:"Task"
+M aG:"Task(index, status: Status.NOT_RUN)"
+TBV aE|aF|aG
 TBV y|z|8
-M ag:"sig"
-M ah:"Signature"
-M ai:"<Signature ()>"
-TBV ag|ah|ai
-M aj:"catastro_id = payload[\"catastro_id\"]"
-TBE n|36|l|aj
+M aH:"sig"
+M aI:"Signature"
+M aJ:"<Signature ()>"
+TBV aH|aI|aJ
+M aK:"cred = vault.get_secret(\"valorix\")"
+TBE n|49|l|aK
 TBV C|D|E
 TBV O|L|M
 TBV X|U|V
 TBV 7|z|8
-ETB 8.356
-M ak:"ERROR"
-EE t|ak|8.356
-C r|l|8.356
-M al:" status: "
-C f|al|8.356
-M am:"error"
-M an:"FAIL\n"
-C am|an|8.357
-M ao:"\n'catastro_id'\n"
-C am|ao|8.357
-M ap:"======================== "
-C f|ap|8.357
-M aq:"Full Traceback (running "
-C f|aq|8.357
-C r|l|8.357
-M ar:")"
-C f|ar|8.357
-M as:" ========================\n"
-C f|as|8.357
-M at:"traceback"
-M au:"Traceback (most recent call last):\n  File \"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/tasks/_commands.py\", line 453, in run\n    result = task.run(**kwargs)\n             ^^^^^^^^^^^^^^^^^^\n  File \"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/tasks/_task.py\", line 57, in run\n    return self.method(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/carlubi/Desktop/robocorp_valorix/tasks.py\", line 36, in index\n    catastro_id = payload[\"catastro_id\"]\n                  ~~~~~~~^^^^^^^^^^^^^^^\nKeyError: 'catastro_id'\n\n"
-C at|au|8.358
-M av:"================================================================================\n"
-C f|av|8.358
-M aw:"FAIL"
-M ax:"'catastro_id'"
-ET aw|ax|8.358
-M az:"Teardown tasks"
-M aA:"teardown"
-P ay:az|aA|e|e|0
-ST ay|8.358
-M aB:"Process snapshot"
-SPS aB|8.359
-M aC:"System information:\nMemory: Total: 16.0 G, Available: 2.7 G, Used: 83.3 %\nCPUs: 10"
-P aD:e|e|e|e|0
-L I|aC|aD|0|8.449
-M aE:"Current Process: python3.12 (pid: 7804, status: running)\nCommand Line: /Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/bin/python3.12 -m robocorp.tasks run tasks.py\nStarted: 17:29:05\nParent pid: 7766\nResident Set Size: 144.1 M\nVirtual Memory Size: 392.5 G"
-L I|aE|aD|0|8.46
-M aF:"OutputToPortThread|Thread ID: 6146027520 (daemon)"
-STD aF|8.46
-M aG:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/threading.py"
-M aH:"_bootstrap"
-M aI:"self._bootstrap_inner()"
-TBE aG|1032|aH|aI
-M aJ:"Thread"
-M aK:"<Thread(OutputToPortThread, started daemon 6146027520)>"
-TBV ad|aJ|aK
-M aL:"_bootstrap_inner"
-M aM:"self.run()"
-TBE aG|1075|aL|aM
-TBV ad|aJ|aK
-M aN:"self._target(*self._args, **self._kwargs)"
-TBE aG|1012|ab|aN
-TBV ad|aJ|aK
-M aO:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/tasks/_log_output_setup.py"
-M aP:"write_in_thread"
-M aQ:"msg = q.get()"
-TBE aO|73|aP|aQ
-M aR:"msg"
-M aS:"'ST ay|8.339\\n'"
-TBV aR|D|aS
-M aT:"client_socket"
-M aU:"socket"
-M aV:"<socket.socket fd=4, family=2, type=1, proto=0, laddr=('127.0.0.1', 51757), raddr=('127.0.0.1', 51592)>"
-TBV aT|aU|aV
-M aW:"log"
-M aX:"module"
-M aY:"<module 'robocorp.log' from '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/__init__.py'>"
-TBV aW|aX|aY
-M aZ:"port_in_env"
-M a0:"'51592'"
-TBV aZ|D|a0
-M a1:"q"
-M a2:"Queue"
-M a3:"<queue.Queue object at 0x10367f230>"
-TBV a1|a2|a3
-M a4:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/queue.py"
-M a5:"get"
-M a6:"self.not_empty.wait()"
-TBE a4|171|a5|a6
-TBV ad|a2|a3
-M a7:"block"
-M a8:"bool"
-M a9:"True"
-TBV a7|a8|a9
-M ba:"timeout"
-TBV ba|U|V
-M bb:"wait"
-M bc:"waiter.acquire()"
-TBE aG|355|bb|bc
-M bd:"Condition"
-M be:"<Condition(<unlocked _thread.lock object at 0x1037fb2c0>, 1)>"
-TBV ad|bd|be
-TBV ba|U|V
-M bf:"waiter"
-M bg:"lock"
-M bh:"<locked _thread.lock object at 0x103869fc0>"
-TBV bf|bg|bh
-M bi:"saved_state"
-TBV bi|U|V
-M bj:"gotit"
-M bk:"False"
-TBV bj|a8|bk
-ETD 8.462
-M bl:"MainThread|Thread ID: 8491805760 (non daemon)"
-STD bl|8.462
-M bm:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/__init__.py"
-M bn:"process_snapshot"
-M bo:"robo_logger.process_snapshot()"
-TBE bm|268|bn|bo
-M bp:"logger_instances"
-M bq:"{<robocorp.log._robo_logger._RoboLogger object at 0x1036495e0>: 1, <robocorp.log._robo_logger._RoboLogger object at 0x10383f350>: 1}"
-TBV bp|z|bq
-M br:"robo_logger"
-M bs:"_RoboLogger"
-M bt:"<robocorp.log._robo_logger._RoboLogger object at 0x1036495e0>"
-TBV br|bs|bt
-M bu:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_logger.py"
-M bv:"new_func"
-M bw:"return func(self, *args, **kwargs)"
-TBE bu|20|bv|bw
-TBV ad|bs|bt
-M bx:"args"
-M by:"tuple"
-M bz:"()"
-TBV bx|by|bz
+TBV aa|U|V
+TBV ac|U|V
+TBV ae|U|V
+TBV at|au|av
+M aL:"get_secret"
+M aM:"return self.adapter.get_secret(secret_name)"
+TBE ao|617|aL|aM
+TBV aE|au|av
+TBV ay|D|az
+M aN:"adapter"
+M aO:"self._adapter = self._adapter_factory()"
+TBE ao|593|aN|aO
+TBV aE|au|av
+M aP:"factory"
+M aQ:"return adapter(*args, **kwargs)"
+TBE ao|607|aP|aQ
+M aR:"ABCMeta"
+M aS:"<class 'RPA.Robocorp.Vault.RobocorpVault'>"
+TBV aN|aR|aS
+TBV ap|aq|ar
 TBV y|z|8
-M bA:"func"
-M bB:"function"
-M bC:"<function _RoboLogger.process_snapshot at 0x103a90f40>"
-TBV bA|bB|bC
-M bD:"return self._robot_output_impl.process_snapshot(hide_vars)"
-TBE bu|416|bn|bD
-TBV ad|bs|bt
-M bE:"hide_vars"
-TBV bE|a8|bk
-M bF:"/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_output_impl.py"
-M bG:"self._dump_threads(hide_vars)"
-TBE bF|747|bn|bG
-M bH:"_RoboOutputImpl"
-M bI:"<robocorp.log._robo_output_impl._RoboOutputImpl object at 0x1034dbc20>"
-TBV ad|bH|bI
-TBV bE|a8|bk
-TBV aW|aX|aY
-M bJ:"entry_id"
-M bK:"'ps_1'"
-TBV bJ|D|bK
-M bL:"entry_type"
-M bM:"'process_snapshot'"
-TBV bL|D|bM
-M bN:"psutil"
-M bO:"<module 'psutil' from '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/psutil/__init__.py'>"
-TBV bN|aX|bO
-M bP:"AccessDenied"
-M bQ:"<class 'psutil.AccessDenied'>"
-TBV bP|4|bQ
-M bR:"NoSuchProcess"
-M bS:"<class 'psutil.NoSuchProcess'>"
-TBV bR|4|bS
-M bT:"ZombieProcess"
-M bU:"<class 'psutil.ZombieProcess'>"
-TBV bT|4|bU
-M bV:"curr_process"
-M bW:"Process"
-M bX:"psutil.Process(pid=7804, name='python3.12', status='running', started='17:29:05')"
-TBV bV|bW|bX
-M bY:"log_info"
-M bZ:"<function _RoboOutputImpl.process_snapshot.<locals>.log_info at 0x103aaef20>"
-TBV bY|bB|bZ
-M b0:"memory_info"
-M b1:"'Total: 16.0 G, Available: 2.7 G, Used: 83.3 %'"
-TBV b0|D|b1
-M b2:"child_i"
-M b3:"int"
-M b4:"0"
-TBV b2|b3|b4
-M b5:"child"
-TBV b5|bW|bX
-M b6:"name"
-M b7:"'python3.12'"
-TBV b6|D|b7
-M b8:"status"
-M b9:"'running'"
-TBV b8|D|b9
-M ca:"create_time"
-M cb:"'17:29:05'"
-TBV ca|D|cb
-M cc:"ppid"
-M cd:"'7766'"
-TBV cc|D|cd
-M ce:"cmdline"
-M cf:"'/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/bin/python3.12 -m robocorp.tasks run tasks.py'"
-TBV ce|D|cf
-M cg:"rss"
-M ch:"'144.1 M'"
-TBV cg|D|ch
-M ci:"vms"
-M cj:"'392.5 G'"
-TBV ci|D|cj
-M ck:"proc_memory_info"
-M cl:"pmem"
-M cm:"pmem(rss=151142400, vms=421415665664, pfaults=30133, pageins=791)"
-TBV ck|cl|cm
-M cn:"message"
-M co:"'Current Process: python3.12 (pid: 7804, status: running)\\nCommand Line: /Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/bin/python3.12 -m robocorp.tasks run tasks.py\\nStarted: 17:29:05\\nParent pid: 7766\\nResident Set Size: 144.1 M\\nVirtual Memory Size: 392.5 G'"
-TBV cn|D|co
-M cp:"_dump_threads"
-M cq:"stack.append((f, f.f_lineno))"
-TBE bF|768|cp|cq
-TBV ad|bH|bI
-TBV bE|a8|bk
-M cr:"thread_id"
-M cs:"8491805760"
-TBV cr|b3|cs
-M ct:"frame"
-M cu:"<frame at 0x103aa0d00, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_output_impl.py', line 772, code _dump_threads>"
-TBV ct|ct|cu
-M cv:"thread"
-M cw:"_MainThread"
-M cx:"<_MainThread(MainThread, started 8491805760)>"
-TBV cv|cw|cx
-M cy:"title"
-M cz:"'MainThread|Thread ID: 8491805760 (non daemon)'"
-TBV cy|D|cz
-M cA:"f"
-M cB:"<frame at 0x11b707350, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/tasks/_commands.py', line 494, code run>"
-TBV cA|ct|cB
-M cC:"stack"
-M cD:"list"
-M cE:"[(<frame at 0x103c70a00, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/__init__.py', line 268, code process_snapshot>, 268), (<frame at 0x11b00a6c0, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_logger.py', line 20, code new_func>, 20), (<frame at 0x11aee1900, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_logger.py', line 416, code process_snapshot>, 416), (<frame at 0x11aeae5c0, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_output_impl.py', line 747, code process_snapshot>, 747), (<frame at 0x103aa0d00, file '/Users/Shared/sema4ai/ht/22bf795_c5e81ff_bb858f00/lib/python3.12/site-packages/robocorp/log/_robo_output_impl.py', line 772, code _dump_threads>, 768)]"
-TBV cC|cD|cE
-ETD 8.464
-EPS 8.464
-ET j|e|8.476
-ER ak|8.476
+M aT:"__init__"
+M aU:"self._host = required_env(\"RC_API_SECRET_HOST\")"
+TBE ao|247|aT|aU
+M aV:"RobocorpVault"
+M aW:"<RPA.Robocorp.Vault.RobocorpVault object at 0x1104d2330>"
+TBV aE|aV|aW
+TBV ap|aq|ar
+TBV y|z|8
+M aX:"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/core/helpers.py"
+M aY:"required_env"
+M aZ:"raise KeyError(f\"Missing required environment variable: {name}\")"
+TBE aX|59|aY|aZ
+M a0:"name"
+M a1:"'RC_API_SECRET_HOST'"
+TBV a0|D|a1
+M a2:"default"
+M a3:"object"
+M a4:"<object object at 0x109af7d60>"
+TBV a2|a3|a4
+M a5:"val"
+TBV a5|a3|a4
+ETB 9.858
+M a6:"KeyError: \"Configuration Error: Missing required environment variable(s): RC_API_SECRET_HOST, RC_API_SECRET_TOKEN, RC_WORKSPACE_ID.\\n\\nTo connect to the Robocorp Control Room, these variables are essential. Please verify your configuration to ensure that all required environment variables are set.\\n\\nFor local runs, configure these variables in your 'devdata/env.json' file.\\n\\nConsult the 'Configure file vault support' section in the documentation for step-by-step setup instructions:\\nhttps://robocorp.com/docs-robot-framework/development-guide/variables-and-secrets/vault\\n\\nWhen running from the Control Room, these variables should be configured automatically.\\nIf running with Robocorp Visual Studio Code extension, ensure that the project is linked to Control Room:\\nhttps://robocorp.com/docs-robot-framework/developer-tools/visual-studio-code/extension-features#linking-to-control-room\" (this exception occurred during handling of the previous exception)"
+STB a6|9.858
+TBE aB|57|aC|aD
+TBV aE|aF|aG
+TBV y|z|8
+TBV aH|aI|aJ
+TBE n|49|l|aK
+TBV C|D|E
+TBV O|L|M
+TBV X|U|V
+TBV 7|z|8
+TBV aa|U|V
+TBV ac|U|V
+TBV ae|U|V
+TBV at|au|av
+TBE ao|617|aL|aM
+TBV aE|au|av
+TBV ay|D|az
+TBE ao|593|aN|aO
+TBV aE|au|av
+TBE ao|607|aP|aQ
+TBV aN|aR|aS
+TBV ap|aq|ar
+TBV y|z|8
+M a7:"_raise_invalid_configuration()"
+TBE ao|251|aT|a7
+TBV aE|aV|aW
+TBV ap|aq|ar
+TBV y|z|8
+M a8:"_raise_invalid_configuration"
+M a9:"raise KeyError(error_message)"
+TBE ao|224|a8|a9
+M ba:"missing_env_vars"
+M bb:"list"
+M bc:"['RC_API_SECRET_HOST', 'RC_API_SECRET_TOKEN', 'RC_WORKSPACE_ID']"
+TBV ba|bb|bc
+M bd:"missing_vars_str"
+M be:"'RC_API_SECRET_HOST, RC_API_SECRET_TOKEN, RC_WORKSPACE_ID'"
+TBV bd|D|be
+M bf:"error_message"
+M bg:"\"Configuration Error: Missing required environment variable(s): RC_API_SECRET_HOST, RC_API_SECRET_TOKEN, RC_WORKSPACE_ID.\\n\\nTo connect to the Robocorp Control Room, these variables are essential. Please verify your configuration to ensure that all required environment variables are set.\\n\\nFor local runs, configure these variables in your 'devdata/env.json' file.\\n\\nConsult the 'Configure file vault support' section in the documentation for step-by-step setup instructions:\\nhttps://robocorp.com/docs-robot-framework/development-guide/variables-and-secrets/vault\\n\\nWhen running from the Control Room, these variables should be configured automatically.\\nIf running with Robocorp Visual Studio Code extension, ensure that the project is linked to Control Room:\\nhttps://robocorp.com/docs-robot-framework/developer-tools/visual-studio-code/extension-features#linking-to-control-room\""
+TBV bf|D|bg
+ETB 9.858
+M bh:"ERROR"
+EE t|bh|9.859
+EE t|bh|9.86
+C r|l|9.86
+M bi:" status: "
+C f|bi|9.86
+M bj:"error"
+M bk:"FAIL\n"
+C bj|bk|9.86
+M bl:"\n\"Configuration Error: Missing required environment variable(s): RC_API_SECRET_HOST, RC_API_SECRET_TOKEN, RC_WORKSPACE_ID.\\n\\nTo connect to the Robocorp Control Room, these variables are essential. Please verify your configuration to ensure that all required environment variables are set.\\n\\nFor local runs, configure these variables in your 'devdata/env.json' file.\\n\\nConsult the 'Configure file vault support' section in the documentation for step-by-step setup instructions:\\nhttps://robocorp.com/docs-robot-framework/development-guide/variables-and-secrets/vault\\n\\nWhen running from the Control Room, these variables should be configured automatically.\\nIf running with Robocorp Visual Studio Code extension, ensure that the project is linked to Control Room:\\nhttps://robocorp.com/docs-robot-framework/developer-tools/visual-studio-code/extension-features#linking-to-control-room\"\n"
+C bj|bl|9.86
+M bm:"======================== "
+C f|bm|9.861
+M bn:"Full Traceback (running "
+C f|bn|9.861
+C r|l|9.861
+M bo:")"
+C f|bo|9.861
+M bp:" ========================\n"
+C f|bp|9.861
+M bq:"traceback"
+M br:"Traceback (most recent call last):\n  File \"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/Robocorp/Vault.py\", line 247, in __init__\n    self._host = required_env(\"RC_API_SECRET_HOST\")\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/core/helpers.py\", line 59, in required_env\n    raise KeyError(f\"Missing required environment variable: {name}\")\nKeyError: 'Missing required environment variable: RC_API_SECRET_HOST'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/tasks/_commands.py\", line 453, in run\n    result = task.run(**kwargs)\n             ^^^^^^^^^^^^^^^^^^\n  File \"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/tasks/_task.py\", line 57, in run\n    return self.method(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/carlubi/Desktop/robocorp_valorix/tasks.py\", line 49, in index\n    cred = vault.get_secret(\"valorix\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/Robocorp/Vault.py\", line 617, in get_secret\n    return self.adapter.get_secret(secret_name)\n           ^^^^^^^^^^^^\n  File \"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/Robocorp/Vault.py\", line 593, in adapter\n    self._adapter = self._adapter_factory()\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/Robocorp/Vault.py\", line 607, in factory\n    return adapter(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/Robocorp/Vault.py\", line 251, in __init__\n    _raise_invalid_configuration()\n  File \"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/RPA/Robocorp/Vault.py\", line 224, in _raise_invalid_configuration\n    raise KeyError(error_message)\nKeyError: \"Configuration Error: Missing required environment variable(s): RC_API_SECRET_HOST, RC_API_SECRET_TOKEN, RC_WORKSPACE_ID.\\n\\nTo connect to the Robocorp Control Room, these variables are essential. Please verify your configuration to ensure that all required environment variables are set.\\n\\nFor local runs, configure these variables in your 'devdata/env.json' file.\\n\\nConsult the 'Configure file vault support' section in the documentation for step-by-step setup instructions:\\nhttps://robocorp.com/docs-robot-framework/development-guide/variables-and-secrets/vault\\n\\nWhen running from the Control Room, these variables should be configured automatically.\\nIf running with Robocorp Visual Studio Code extension, ensure that the project is linked to Control Room:\\nhttps://robocorp.com/docs-robot-framework/developer-tools/visual-studio-code/extension-features#linking-to-control-room\"\n\n"
+C bq|br|9.864
+M bs:"================================================================================\n"
+C f|bs|9.864
+M bt:"FAIL"
+ET bt|bg|9.864
+M bv:"Teardown tasks"
+M bw:"teardown"
+P bu:bv|bw|e|e|0
+ST bu|9.864
+M bx:"Process snapshot"
+SPS bx|9.865
+M by:"System information:\nMemory: Total: 16.0 G, Available: 682.1 M, Used: 95.8 %\nCPUs: 10"
+P bz:e|e|e|e|0
+L I|by|bz|0|9.981
+M bA:"Current Process: python3.12 (pid: 43623, status: running)\nCommand Line: /Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/bin/python3.12 -m robocorp.tasks run tasks.py -t index\nStarted: 11:07:55\nParent pid: 43545\nResident Set Size: 136.4 M\nVirtual Memory Size: 33.6 G"
+L I|bA|bz|0|9.994
+M bB:"OutputToPortThread|Thread ID: 12944351232 (daemon)"
+STD bB|9.994
+M bC:"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/threading.py"
+M bD:"_bootstrap"
+M bE:"self._bootstrap_inner()"
+TBE bC|1032|bD|bE
+M bF:"Thread"
+M bG:"<Thread(OutputToPortThread, started daemon 12944351232)>"
+TBV aE|bF|bG
+M bH:"_bootstrap_inner"
+M bI:"self.run()"
+TBE bC|1075|bH|bI
+TBV aE|bF|bG
+M bJ:"self._target(*self._args, **self._kwargs)"
+TBE bC|1012|aC|bJ
+TBV aE|bF|bG
+M bK:"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/tasks/_log_output_setup.py"
+M bL:"write_in_thread"
+M bM:"msg = q.get()"
+TBE bK|73|bL|bM
+M bN:"msg"
+M bO:"'ST bu|9.842\\n'"
+TBV bN|D|bO
+M bP:"client_socket"
+M bQ:"socket"
+M bR:"<socket.socket fd=4, family=2, type=1, proto=0, laddr=('127.0.0.1', 55666), raddr=('127.0.0.1', 63703)>"
+TBV bP|bQ|bR
+M bS:"log"
+M bT:"module"
+M bU:"<module 'robocorp.log' from '/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/log/__init__.py'>"
+TBV bS|bT|bU
+M bV:"port_in_env"
+M bW:"'63703'"
+TBV bV|D|bW
+M bX:"q"
+M bY:"Queue"
+M bZ:"<queue.Queue object at 0x10a3a3410>"
+TBV bX|bY|bZ
+M b0:"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/queue.py"
+M b1:"get"
+M b2:"self.not_empty.wait()"
+TBE b0|171|b1|b2
+TBV aE|bY|bZ
+M b3:"block"
+M b4:"bool"
+M b5:"True"
+TBV b3|b4|b5
+M b6:"timeout"
+TBV b6|U|V
+M b7:"wait"
+M b8:"waiter.acquire()"
+TBE bC|355|b7|b8
+M b9:"Condition"
+M ca:"<Condition(<unlocked _thread.lock object at 0x10a3a9140>, 1)>"
+TBV aE|b9|ca
+TBV b6|U|V
+M cb:"waiter"
+M cc:"lock"
+M cd:"<locked _thread.lock object at 0x10a085ec0>"
+TBV cb|cc|cd
+M ce:"saved_state"
+TBV ce|U|V
+M cf:"gotit"
+M cg:"False"
+TBV cf|b4|cg
+ETD 9.997
+M ch:"MainThread|Thread ID: 8607743552 (non daemon)"
+STD ch|9.997
+M ci:"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/log/__init__.py"
+M cj:"process_snapshot"
+M ck:"robo_logger.process_snapshot()"
+TBE ci|268|cj|ck
+M cl:"logger_instances"
+M cm:"{<robocorp.log._robo_logger._RoboLogger object at 0x10a021d90>: 1, <robocorp.log._robo_logger._RoboLogger object at 0x10a3fba40>: 1}"
+TBV cl|z|cm
+M cn:"robo_logger"
+M co:"_RoboLogger"
+M cp:"<robocorp.log._robo_logger._RoboLogger object at 0x10a021d90>"
+TBV cn|co|cp
+M cq:"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/log/_robo_logger.py"
+M cr:"new_func"
+M cs:"return func(self, *args, **kwargs)"
+TBE cq|20|cr|cs
+TBV aE|co|cp
+TBV ap|aq|ar
+TBV y|z|8
+M ct:"func"
+M cu:"function"
+M cv:"<function _RoboLogger.process_snapshot at 0x10a5514e0>"
+TBV ct|cu|cv
+M cw:"return self._robot_output_impl.process_snapshot(hide_vars)"
+TBE cq|416|cj|cw
+TBV aE|co|cp
+M cx:"hide_vars"
+TBV cx|b4|cg
+M cy:"/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/log/_robo_output_impl.py"
+M cz:"self._dump_threads(hide_vars)"
+TBE cy|747|cj|cz
+M cA:"_RoboOutputImpl"
+M cB:"<robocorp.log._robo_output_impl._RoboOutputImpl object at 0x109f488f0>"
+TBV aE|cA|cB
+TBV cx|b4|cg
+TBV bS|bT|bU
+M cC:"entry_id"
+M cD:"'ps_2'"
+TBV cC|D|cD
+M cE:"entry_type"
+M cF:"'process_snapshot'"
+TBV cE|D|cF
+M cG:"psutil"
+M cH:"<module 'psutil' from '/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/psutil/__init__.py'>"
+TBV cG|bT|cH
+M cI:"AccessDenied"
+M cJ:"<class 'psutil.AccessDenied'>"
+TBV cI|4|cJ
+M cK:"NoSuchProcess"
+M cL:"<class 'psutil.NoSuchProcess'>"
+TBV cK|4|cL
+M cM:"ZombieProcess"
+M cN:"<class 'psutil.ZombieProcess'>"
+TBV cM|4|cN
+M cO:"curr_process"
+M cP:"Process"
+M cQ:"psutil.Process(pid=43623, name='python3.12', status='running', started='11:07:55')"
+TBV cO|cP|cQ
+M cR:"log_info"
+M cS:"<function _RoboOutputImpl.process_snapshot.<locals>.log_info at 0x10a57b6a0>"
+TBV cR|cu|cS
+M cT:"memory_info"
+M cU:"'Total: 16.0 G, Available: 682.1 M, Used: 95.8 %'"
+TBV cT|D|cU
+M cV:"child_i"
+M cW:"int"
+M cX:"0"
+TBV cV|cW|cX
+M cY:"child"
+TBV cY|cP|cQ
+M cZ:"'python3.12'"
+TBV a0|D|cZ
+M c0:"status"
+M c1:"'running'"
+TBV c0|D|c1
+M c2:"create_time"
+M c3:"'11:07:55'"
+TBV c2|D|c3
+M c4:"ppid"
+M c5:"'43545'"
+TBV c4|D|c5
+M c6:"cmdline"
+M c7:"'/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/bin/python3.12 -m robocorp.tasks run tasks.py -t index'"
+TBV c6|D|c7
+M c8:"rss"
+M c9:"'136.4 M'"
+TBV c8|D|c9
+M da:"vms"
+M db:"'33.6 G'"
+TBV da|D|db
+M dc:"proc_memory_info"
+M dd:"pmem"
+M de:"pmem(rss=143020032, vms=36103307264, pfaults=65283, pageins=1363)"
+TBV dc|dd|de
+M df:"message"
+M dg:"'Current Process: python3.12 (pid: 43623, status: running)\\nCommand Line: /Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/bin/python3.12 -m robocorp.tasks run tasks.py -t index\\nStarted: 11:07:55\\nParent pid: 43545\\nResident Set Size: 136.4 M\\nVirtual Memory Size: 33.6 G'"
+TBV df|D|dg
+M dh:"_dump_threads"
+M di:"stack.append((f, f.f_lineno))"
+TBE cy|768|dh|di
+TBV aE|cA|cB
+TBV cx|b4|cg
+M dj:"thread_id"
+M dk:"8607743552"
+TBV dj|cW|dk
+M dl:"frame"
+M dm:"<frame at 0x10a750f20, file '/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/log/_robo_output_impl.py', line 772, code _dump_threads>"
+TBV dl|dl|dm
+M dn:"thread"
+M do:"_MainThread"
+M dp:"<_MainThread(MainThread, started 8607743552)>"
+TBV dn|do|dp
+M dq:"title"
+M dr:"'MainThread|Thread ID: 8607743552 (non daemon)'"
+TBV dq|D|dr
+M ds:"f"
+M dt:"<frame at 0x7fdce6b66980, file '/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/tasks/_commands.py', line 494, code run>"
+TBV ds|dl|dt
+M du:"stack"
+M dv:"[(<frame at 0x10a6d52f0, file '/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/log/__init__.py', line 268, code process_snapshot>, 268), (<frame at 0x111297300, file '/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/log/_robo_logger.py', line 20, code new_func>, 20), (<frame at 0x111279900, file '/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/log/_robo_logger.py', line 416, code process_snapshot>, 416), (<frame at 0x1112567a0, file '/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/log/_robo_output_impl.py', line 747, code process_snapshot>, 747), (<frame at 0x10a750f20, file '/Users/Shared/robocorp/ht/22bf795_b1f3c24_691db988/lib/python3.12/site-packages/robocorp/log/_robo_output_impl.py', line 772, code _dump_threads>, 768)]"
+TBV du|bb|dv
+ETD 10.0
+EPS 10.0
+ET j|e|10.014
+ER bh|10.014

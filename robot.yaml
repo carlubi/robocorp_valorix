@@ -2,8 +2,10 @@
 # https://github.com/robocorp/rcc/blob/master/docs/recipes.md#what-is-in-robotyaml
 
 tasks:
-  Browser Example:
-    shell: python -m robocorp.tasks run tasks.py
+  Index Catastro + Trovimap:
+    shell: python -m robocorp.tasks run tasks.py -t index
+  Trovimap Valoracion:
+    shell: python -m robocorp.tasks run tasks.py -t trovimap_valoracion
 
 environmentConfigs:
   - environment_windows_amd64_freeze.yaml
